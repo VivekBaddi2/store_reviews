@@ -225,7 +225,7 @@ export function AdminPage() {
               <Field id="admin-user-name" label="Full name" required minLength={20} maxLength={60} value={userForm.name} onChange={(event) => setUserForm({ ...userForm, name: event.target.value })} />
               <Field id="admin-user-email" label="Email address" type="email" required value={userForm.email} onChange={(event) => setUserForm({ ...userForm, email: event.target.value })} />
               <Field id="admin-user-address" label="Address" required maxLength={400} value={userForm.address} onChange={(event) => setUserForm({ ...userForm, address: event.target.value })} />
-              <Field id="admin-user-password" label="Temporary password" type="password" required minLength={8} maxLength={16} value={userForm.password} onChange={(event) => setUserForm({ ...userForm, password: event.target.value })} />
+              <Field id="admin-user-password" label="Password" type="password" required minLength={8} maxLength={16} value={userForm.password} onChange={(event) => setUserForm({ ...userForm, password: event.target.value })} />
               <SelectField id="admin-user-role" label="Role" value={userForm.role} onChange={(event) => setUserForm({ ...userForm, role: event.target.value })}>
                 {ROLES.map((role) => <option key={role} value={role}>{role}</option>)}
               </SelectField>

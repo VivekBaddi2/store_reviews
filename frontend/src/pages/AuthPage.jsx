@@ -79,9 +79,20 @@ export function AuthPage({ mode }) {
           </div>
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">{isSignup ? "Join the community" : "Welcome back"}</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink">{isSignup ? "Create your account" : "Sign in to Ratewise"}</h2>
-          <p className="mt-2 text-sm leading-6 text-secondary">
+          <p className="my-2 text-sm leading-6 text-secondary">
             {isSignup ? "Create an account to rate the stores you visit." : "Use your account to continue to your workspace."}
           </p>
+
+          <div className="p-2 border rounded-lg bg-amber-50 border-amber-300">
+            <div className="font-bold"><p>Test Credentials</p></div>
+            <div className="text-slate-600">
+              <p>Use these test credentials to login as System Administrator</p>
+            </div>
+            <div className="text-amber-700">
+              <p>Email: <span className="font-bold">test@gmail.com</span></p>
+              <p>Password: <span className="font-bold">Test@123</span></p>
+            </div>
+          </div>
 
           <form onSubmit={handleSubmit} className="mt-7 space-y-4">
             {notice && <Alert tone="success">{notice}</Alert>}
